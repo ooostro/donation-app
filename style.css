@@ -1,0 +1,248 @@
+@font-face {
+  src: url(fonts/Montserrat-Regular.ttf);
+  font-family: Montserrat Regular;
+}
+
+@font-face {
+  src: url(fonts/Montserrat-Bold.ttf);
+  font-family: Montserrat Bold;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #063154;
+  background: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Montserrat Bold', sans-serif;
+  text-align: center;
+}
+
+p,
+.why-donate,
+#whyDonateText,
+.submit-button,
+.app-wrapper--buttons a {
+  font-size: .9em;
+}
+
+p {
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #989898;
+  line-height: 1.5;
+}
+
+.bold-text {
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+.orange-text {
+  color: #eb7424;
+}
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================================================================= */
+/* main app ==================================================================== */
+/* ============================================================================= */
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.app-wrapper--main {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px #e1e1e1 solid;
+  border-top: none;
+}
+
+/* ============================================================================= */
+/* hover div - remaining value ================================================= */
+/* ============================================================================= */
+
+.progress-bar-status,
+#whyDonateText {
+  position: absolute;
+  background-color: #063154;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.progress-bar-status {
+  bottom: 167%;
+  display: none;
+}
+
+.progress-bar-status::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #063154;
+  left: 47%;
+}
+
+.progress-bar:hover .progress-bar-status {
+  display: block;
+}
+
+#remainingAmount {
+  font-family: 'Montserrat Bold',
+    sans-serif;
+}
+
+/* ============================================================================= */
+/* progress bar ================================================================ */
+/* ============================================================================= */
+
+.progress-bar-status p {
+  color: #fff;
+}
+
+.progress-bar {
+  background-color: #dadada;
+  height: 16px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+#progressBarFill {
+  content: '';
+  position: absolute;
+  width: 0;
+  background-color: #eb7424;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.text-wrapper {
+  padding: 10px 25px 28px;
+}
+
+.app-wrapper--buttons a,
+.submit-button {
+  font-family: 'Montserrat Bold',
+    sans-serif;
+  border-radius: 5px;
+  border: solid 1px #d0d0d0;
+}
+
+/* ============================================================================= */
+/* form ======================================================================== */
+/* ============================================================================= */
+
+form {
+  height: 50px;
+  margin: 10px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dollar-sign {
+  font-size: 1.5em;
+}
+
+.input-box,
+.submit-button {
+  height: 100%;
+}
+
+.input-box:focus,
+.submit-button:focus,
+.app-wrapper--buttons a:focus,
+.why-donate:focus {
+  outline-color: #ddd;
+}
+
+.text-form {
+  width: 50%;
+}
+
+.input-box {
+  width: 77%;
+  border-radius: 5px;
+  border: solid 1px #d0d0d0;
+  font-family: 'Montserrat Regular',
+    sans-serif;
+  font-size: 1.5em;
+  padding: 0 .4em;
+}
+
+.submit-button {
+  background-color: #8cbe0f;
+  color: #fff;
+  padding: .2em 1.8em;
+}
+
+/*==============================================================================*/
+/* why donate ================================================================= */
+/* ============================================================================= */
+
+.why-donate {
+  color: #0fa0df;
+  font-family: 'Montserrat Bold',
+    sans-serif;
+}
+
+#whyDonateText {
+  display: none;
+  bottom: 9%;
+  padding: 1em 0;
+}
+
+#whyDonateText::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #063154;
+  left: 22.5%;
+  bottom: 98%;
+}
+
+/* ============================================================================= */
+/* bottom buttons ============================================================== */
+/* ============================================================================= */
+
+.app-wrapper--buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-wrapper--buttons a {
+  width: 47%;
+  text-align: center;
+  background-color: #e4e4e4;
+  text-decoration: none;
+  color: #818181;
+  padding: 14px;
+  margin-top: 23px;
+}

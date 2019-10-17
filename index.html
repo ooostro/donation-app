@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Donation App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon:400i|Noto+Serif+TC" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="app-wrapper">
+            <div class="app-wrapper--title">
+                <h1>Help Us Out!</h1>
+            </div>
+            <div class="app-wrapper--main">
+                <div class="progress-bar">
+                    <div id="progressBarFill"></div>
+                    <div class="progress-bar-status">
+                        <p>We need <span id="remainingAmount">$5000</span> more to reach our
+                            goal!</p>
+                    </div>
+                </div>
+                <div class="text-wrapper">
+                    <p class="bold-text"><span class="orange-text">Only 3 days left</span> to reach $5000.</p>
+                    <p>Join the <span id="numberOfDonations" class="bold-text">0</span> other donors who are helping
+                        make a positive impact in
+                        the
+                        community. Every dollar helps and we can't thank everyone enough.</p>
+                    <form>
+                        <div class="text-form">
+                            <span class="dollar-sign">$</span>
+                            <input class="input-box" type="text" id="donation">
+                        </div>
+                        <button id="submitButton" type="button" onClick="donate();" class="submit-button">Donate
+                            Now</button>
+                    </form>
+                    <p id="errorText"></p>
+                    <a onmouseover="showWhyDonate()" onmouseout="hideWhyDonate()" href="#"
+                        class="bold-text why-donate">Why donate $50?</a>
+                    <div id="whyDonateText">You know we're LIVING in a SOCIETY!</div>
+                </div>
+            </div>
+            <div class="app-wrapper--buttons">
+                <a href="#">Save for Later</a>
+                <a href="#">Tell A Friend</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="scripts.js"></script>
+
+</body>
+
+</html>
