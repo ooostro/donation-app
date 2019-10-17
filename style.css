@@ -32,7 +32,6 @@ h1 {
 
 p,
 .why-donate,
-#whyDonateText,
 .submit-button,
 .app-wrapper--buttons a {
   font-size: .9em;
@@ -82,7 +81,7 @@ p {
 /* ============================================================================= */
 
 .progress-bar-status,
-#whyDonateText {
+.why-donate--hover {
   position: absolute;
   background-color: #063154;
   border-radius: 5px;
@@ -142,7 +141,7 @@ p {
 }
 
 .text-wrapper {
-  padding: 10px 25px 28px;
+  padding: 10px 25px;
 }
 
 .app-wrapper--buttons a,
@@ -198,6 +197,7 @@ form {
   background-color: #8cbe0f;
   color: #fff;
   padding: .2em 1.8em;
+  cursor: pointer;
 }
 
 /*==============================================================================*/
@@ -208,15 +208,22 @@ form {
   color: #0fa0df;
   font-family: 'Montserrat Bold',
     sans-serif;
+  text-decoration: underline;
 }
 
-#whyDonateText {
+.why-donate--hover {
   display: none;
   bottom: 9%;
   padding: 1em 0;
+  font-family: 'Montserrat Regular',
+    sans-serif;
 }
 
-#whyDonateText::after {
+.why-donate:hover .why-donate--hover {
+  display: block;
+}
+
+.why-donate--hover::after {
   content: '';
   position: absolute;
   width: 0;

@@ -58,11 +58,3 @@ function donate() {
     }
 
 }
-
-function showWhyDonate() {
-    document.getElementById("whyDonateText").style.display = "block";
-}
-
-function hideWhyDonate() {
-    document.getElementById("whyDonateText").style.display = "none";
-}
